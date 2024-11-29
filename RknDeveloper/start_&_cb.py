@@ -69,15 +69,14 @@ async def approve_request(bot, m):
 @Client.on_message(filters.command("start"))
 async def start_commond(bot, m :Message):
     if m.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:                   
-    await rkn_botz.add_user(bot, m)
-    await force_sub(bot, m, rkn1.FORCE_SUB)
-    await m.reply_text("**Hᴇy 👋 {} 👻\n\nI Am A Auto Approve Bot. I Can Approve Your Channel Or Group Join Requests Instantly.\n\nSteps:\nJust Add Me As An Administrator To Your Group Or Channel To Set Me Up!**".format(m.from_user.mention), reply_markup=InlineKeyboardMarkup([[
-                #⚠️ don't change source code & source link ⚠️ #                
-                InlineKeyboardButton("✛ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Cʜᴀɴɴᴇʟ ࿇", url=f"https://t.me/{bot.username}?startchannel=Bots4Sale&admin=invite_users+manage_chat")
-                ],[
-                InlineKeyboardButton("✛ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ࿇", url=f"https://t.me/{bot.username}?startgroup=Bots4Sale&admin=invite_users+manage_chat")
+        await rkn_botz.add_user(bot, m)
+        await force_sub(bot, m, rkn1.FORCE_SUB)
+        await m.reply_text("**Hᴇy 👋 {} 👻\n\nI Am A Auto Approve Bot. I Can Approve Your Channel Or Group Join Requests Instantly.\n\nSteps:\nJust Add Me As An Administrator To Your Group Or Channel To Set Me Up!**".format(m.from_user.mention), reply_markup=InlineKeyboardMarkup([[                           
+                    InlineKeyboardButton("✛ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Cʜᴀɴɴᴇʟ ࿇", url=f"https://t.me/{bot.username}?startchannel=Bots4Sale&admin=invite_users+manage_chat")
+                    ],[
+                    InlineKeyboardButton("✛ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ࿇", url=f"https://t.me/{bot.username}?startgroup=Bots4Sale&admin=invite_users+manage_chat")
                 
-            ]]))
+                ]]))
             
  
 @Client.on_callback_query(filters.regex("start"))
