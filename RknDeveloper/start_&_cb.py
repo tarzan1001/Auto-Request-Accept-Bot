@@ -49,7 +49,7 @@ async def approve_request(bot, m):
     try:
         await rkn_botz.add_chat(bot, m)
         await bot.approve_chat_join_request(m.chat.id, m.from_user.id)        
-        await bot.send_video(m.from_user.id, img, "**𝖧𝖾𝗅𝗅𝗈 {} 👻\nWelcome To {} 𝖸𝗈𝗎𝗋 𝖱𝖾𝗊𝗎𝖾𝗌𝗍 𝖧𝖺𝗌 𝖡𝖾𝖾𝗇 𝖠𝗉𝗉𝗋𝗈𝗏𝖾𝖽.\n\nSend /start to know more**".format(m.from_user.mention, m.chat.title), reply_markup=InlineKeyboardMarkup([[
+        await bot.send_message(m.from_user.t"**𝖧𝖾𝗅𝗅𝗈 {} 👻\nWelcome To {} 𝖸𝗈𝗎𝗋 𝖱𝖾𝗊𝗎𝖾𝗌𝗍 𝖧𝖺𝗌 𝖡𝖾𝖾𝗇 𝖠𝗉𝗉𝗋𝗈𝗏𝖾𝖽.\n\nSend /start to know more**".format(m.from_user.mention, m.chat.title), reply_markup=InlineKeyboardMarkup([[
         InlineKeyboardButton("✛ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Cʜᴀɴɴᴇʟ ࿇", url=f"https://t.me/{bot.username}?startchannel=Bots4Sale&admin=invite_users+manage_chat")
         ],[
         InlineKeyboardButton("✛ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ࿇", url=f"https://t.me/{bot.username}?startgroup=Bots4Sale&admin=invite_users+manage_chat")]]))
@@ -69,7 +69,7 @@ async def start_commond(bot, m :Message):
     if m.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:                   
     await rkn_botz.add_user(bot, m)
     await force_sub(bot, m, rkn1.FORCE_SUB)
-    await m.reply_photo(photo=rkn1.RKN_PIC, caption="**Hᴇy 👋 {} 👻\n\nI Am A Auto Approve Bot. I Can Approve Your Channel Or Group Join Requests Instantly.\n\nSteps:\nJust Add Me As An Administrator To Your Group Or Channel To Set Me Up!**".format(m.from_user.mention, "https://t.me/telegram/153"), reply_markup=InlineKeyboardMarkup([[
+    await m.reply_text(text="**Hᴇy 👋 {} 👻\n\nI Am A Auto Approve Bot. I Can Approve Your Channel Or Group Join Requests Instantly.\n\nSteps:\nJust Add Me As An Administrator To Your Group Or Channel To Set Me Up!**".format(m.from_user.mention), reply_markup=InlineKeyboardMarkup([[
                 #⚠️ don't change source code & source link ⚠️ #                
                 InlineKeyboardButton("✛ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Cʜᴀɴɴᴇʟ ࿇", url=f"https://t.me/{bot.username}?startchannel=Bots4Sale&admin=invite_users+manage_chat")
                 ],[
@@ -80,8 +80,8 @@ async def start_commond(bot, m :Message):
  
 @Client.on_callback_query(filters.regex("start"))
 async def start_query(bot, cb : CallbackQuery):
-    await cb.message.edit("**Hᴇy, {}!\n\nI'ᴍ Aɴ Aᴜᴛᴏ Aᴘᴘʀᴏᴠᴇ [Aᴅᴍɪɴ Jᴏɪɴ Rᴇǫᴜᴇsᴛs]({}) Bᴏᴛ.\nI Cᴀɴ Aᴘᴘʀᴏᴠᴇ Usᴇʀs Iɴ Cʜᴀɴɴᴇʟs & Gʀᴏᴜᴘs.Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Cʜᴀɴɴᴇʟ Aɴᴅ Gʀᴏᴜᴘ ᴀɴᴅ Pʀᴏᴍᴏᴛᴇ Mᴇ Tᴏ Aᴅᴍɪɴ Wɪᴛʜ Aᴅᴅ Mᴇᴍʙᴇʀs Pᴇʀᴍɪssɪᴏɴ.\n\n__Pᴏᴡᴇʀᴅ Bʏ : @RknDeveloper__**".format(cb.from_user.mention, "https://t.me/telegram/153"), reply_markup=InlineKeyboardMarkup([[
-                #⚠️ don't change source code & source link ⚠️ #                
+    await cb.message.edit("**Hᴇy 👋 {} 👻\n\nI Am A Auto Approve Bot. I Can Approve Your Channel Or Group Join Requests Instantly.\n\nSteps:\nJust Add Me As An Administrator To Your Group Or Channel To Set Me Up!**".format(m.from_user.mention), reply_markup=InlineKeyboardMarkup([[
+              #⚠️ don't change source code & source link ⚠️ #                
                 InlineKeyboardButton("✛ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Cʜᴀɴɴᴇʟ ࿇", url=f"https://t.me/{bot.username}?startchannel=Bots4Sale&admin=invite_users+manage_chat")
                 ],[
                 InlineKeyboardButton("✛ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ࿇", url=f"https://t.me/{bot.username}?startgroup=Bots4Sale&admin=invite_users+manage_chat")
