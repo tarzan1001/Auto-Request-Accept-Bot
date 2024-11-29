@@ -38,7 +38,7 @@ class Config:
     API_HASH = getenv("API_HASH", "e72792e59b9cffd23ac2c1a989803cde")
     BOT_TOKEN = getenv("BOT_TOKEN", "")
  
-    FORCE_SUB = int(getenv("FORCE_SUB"))
+    FORCE_SUB = int(getenv("FORCE_SUB" None))
     ADMIN = list(map(int, getenv("ADMIN", "7425490417").split()))
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002276401285"))
     
