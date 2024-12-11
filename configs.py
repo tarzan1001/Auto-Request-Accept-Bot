@@ -36,7 +36,7 @@ import os, time
 class Config:
     API_ID = int(getenv("API_ID", "23441722"))
     API_HASH = getenv("API_HASH", "e72792e59b9cffd23ac2c1a989803cde")
-    BOT_TOKEN = getenv("BOT_TOKEN", "7789342832:AAEKUmaqjFE2w5ZGVuXEuy4FMaZg7UDgYrE")
+    BOT_TOKEN = getenv("BOT_TOKEN", "7789342832:AAGzC6MPjpMRJGV5kjhb8Lkn_4cIJ8d37l8")
  
     FORCE_SUB = int(getenv("FORCE_SUB", "0"))
     ADMIN = list(map(int, getenv("ADMIN", "1204889321").split()))
