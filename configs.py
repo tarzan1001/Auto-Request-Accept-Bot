@@ -39,7 +39,7 @@ class Config:
     BOT_TOKEN = getenv("BOT_TOKEN", "7789342832:AAGzC6MPjpMRJGV5kjhb8Lkn_4cIJ8d37l8")
  
     FORCE_SUB = int(getenv("FORCE_SUB", "0"))
-    ADMIN = list(map(int, getenv("ADMIN", "1204889321 1204889321").split()))
+    ADMIN = list(map(int, getenv("ADMIN", "1204889321").split()))
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002276401285"))
     
     # database configs
